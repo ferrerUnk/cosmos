@@ -1,28 +1,17 @@
 import React from 'react'
-import logo from '../../assets/images/long-logo.png'
-import { VERSION_NAME, ENV, ENV_LIST } from '../../config/env'
 import FullScreenLoader from '../loaders/FullScreenLoader'
+import DevelopmentFooter from './components/DevelopmentFooter'
 
 export default function MainContainer({children, headerVisible = true, fluid, loading = false, activeHeader, style}) {
   const containerClass = fluid ? "container-fluid" : "container "
   const header = headerVisible ? '' : 'no-header'
   return (
     <div className="main-container">
-
       <div className={`content ${header} ${style}`}>
         <div className={containerClass}>
           {children}
-          
         </div>
-        <div class="footer text-dark">
-          <img src={logo} alt="logo"/>
-          <p className="m-0">
-            {ENV !== ENV_LIST.PRODUCTION ? `${ENV} BUILD` : ''}  
-          </p>
-          <p>
-            Version: {VERSION_NAME}
-          </p>
-        </div>
+        <DevelopmentFooter/>
       </div>
       {loading && <FullScreenLoader/>}
     </div>
