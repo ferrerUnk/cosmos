@@ -58,10 +58,18 @@
         }
         .navigation-links-container {
           margin-top: 30px;
+          display: block;
           overflow-y: auto;
         }
       }
 
+      .side-navigation-footer {
+        .footer-logo {
+          height: 80px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
       .navigation-link-item,
       .logout-link {
         display: flex;
