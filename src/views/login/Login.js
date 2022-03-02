@@ -19,7 +19,7 @@ export default function Login() {
   const login = async(e) => {
     e.preventDefault()
     setLoading(true)
-    history.replace("/classes")
+    history.replace("/")
     setLoading(false)
   }
   
@@ -29,8 +29,8 @@ export default function Login() {
         <div className="login-container">
           <img src={parentlineLogo} alt="logo" className="logo parentline-logo"/>
           <h1 className="title text-center">Log In Portal</h1>
-          <p className="subtitle text-danger">{message}</p>
-          <div className="mt-5">
+          <p className="subtitle text-danger text-center">{message}</p>
+          <div className="">
             <Row>
               <Col size="md" >
                 <Form onSubmit={login}>
@@ -55,7 +55,7 @@ export default function Login() {
                     />
                   </Form.Group>
                   <Link className="mb-4 parentline-link text-decoration-none d-block text-right" to="/forgot_password" >Forgot Password</Link>
-                  <Button className="btn btn-ontraq btn-lg btn-primary btn-auth w-100 d-block " size="lg" variant="primary" type="submit">SIGN IN</Button>
+                  <Button className="btn btn-ontraq btn-lg btn-primary btn-auth w-100 d-block " style={{marginBottom: 50}} size="lg" variant="primary" type="submit">SIGN IN</Button>
                 </Form>
               </Col>
             </Row>
