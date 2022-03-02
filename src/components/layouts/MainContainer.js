@@ -1,18 +1,16 @@
 import React from 'react'
+import Header from '../headers/Header'
 import FullScreenLoader from '../loaders/FullScreenLoader'
+import Content from './components/Content'
 import DevelopmentFooter from './components/DevelopmentFooter'
+import SideNavigation from './components/SideNavigation'
 
 export default function MainContainer({children, headerVisible = true, fluid, loading = false, activeHeader, style}) {
   const containerClass = fluid ? "container-fluid" : "container "
-  const header = headerVisible ? '' : 'no-header'
   return (
     <div className="main-container">
-      <div className={`content ${header} ${style}`}>
-        <div className={containerClass}>
-          {children}
-        </div>
-        <DevelopmentFooter/>
-      </div>
+      <SideNavigation/>
+      <Content containerClass={containerClass}>{children}</Content>
       {loading && <FullScreenLoader/>}
     </div>
   )
