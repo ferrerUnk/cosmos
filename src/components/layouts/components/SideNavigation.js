@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { SideNavigationContext } from '../../../context/SideNavigationContext'
+import NavigationTab from './NavigationTab'
+import SideNavigationAvatar from './SideNavigationAvatar'
 
 export default function SideNavigation({}) {
   const sideNavigationContext = useContext(SideNavigationContext)
@@ -9,7 +11,11 @@ export default function SideNavigation({}) {
       <div className='side-toggler cursor-pointer d-none' onClick={toggle}>
         <i class="fas fa-times"></i>
       </div>
-      asdfasdf
+      <div className='side-navigation-content'>
+        <SideNavigationAvatar/>
+        <NavigationTab/>
+      </div>
+      
     </div>
   )
 }
