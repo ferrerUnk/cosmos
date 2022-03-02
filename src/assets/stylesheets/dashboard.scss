@@ -1,11 +1,11 @@
 @import "constants";
 
 .main-container {
-  background-color: $background-color;
+  background-color: $white;
   min-height: 100vh;
 
   .side-navigation {
-    background-color: green;
+    background-color: $parent-line-color;
     transition: margin-left 0.5s;
     width: 250px;
     position: fixed;
@@ -18,7 +18,7 @@
   }
   .content {
     margin-left: 250px;
-    background-color: red;
+    background-color: $white;
     flex: 1;
     transition: margin-left 0.5s;
     &.hidden-sidenav {
