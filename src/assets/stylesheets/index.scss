@@ -109,3 +109,15 @@ a {
 .text-ontraq {
   color: $ontraq-dark-color;
 }
+
+.bg-ontraq {
+  background-color: $ontraq-color !important;
+}
+
+.bg-parentline {
+  background-color: $parent-line-color;
+}
+
+.shadow {
+  box-shadow: $drop-shadow !important;
+}
