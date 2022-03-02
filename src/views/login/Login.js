@@ -3,6 +3,10 @@ import React, { useState } from 'react'
 import { Col, Form, Row } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import MainContainer from '../../components/layouts/MainContainer'
+
+import ontraqLogo from '../../assets/images/ontraq-logo.png'
+import parentlineLogo from '../../assets/images/parentline-logo.png'
+
 export default function Login() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -23,41 +27,42 @@ export default function Login() {
     <MainContainer headerVisible={false} loading={loading}>
       <div className="auth-container">
         <div className="login-container">
-          <h1 className="title">Log In Portal</h1>
+          <img src={parentlineLogo} alt="logo" className="logo parentline-logo"/>
+          <h1 className="title text-center">Log In Portal</h1>
           <p className="subtitle text-danger">{message}</p>
           <div className="mt-5">
             <Row>
               <Col size="md" >
                 <Form onSubmit={login}>
                   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label className="custom-label">E-mail / Username</Form.Label>
+                    <Form.Label className="custom-label">E-mail or Username</Form.Label>
                     <Form.Control 
                       className="custom-input" 
-                      size="lg" 
                       value={username}
                       type="text" 
-                      placeholder="Enter e-mail or username here"
+                      placeholder="Enter your E-mail or username here"
                       onChange={(e) => setUsername(e.target.value)}
                     />
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                  <Form.Group className="mb-1" controlId="exampleForm.ControlInput1">
                     <Form.Label className="custom-label">Password</Form.Label>
                     <Form.Control 
                       className="custom-input" 
-                      size="lg" 
                       value={password}
                       type="password" 
                       placeholder="Enter password here"
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </Form.Group>
-                  <Link className="link-orange font-24 d-none" to="/forgot_password" >Forgot Password</Link>
-                  <Button className="btn btn-lg btn-primary btn-auth w-100 d-block mt-5 mb-4" size="lg" variant="primary" type="submit">Log In</Button>
+                  <Link className="mb-4 parentline-link text-decoration-none d-block text-right" to="/forgot_password" >Forgot Password</Link>
+                  <Button className="btn btn-ontraq btn-lg btn-primary btn-auth w-100 d-block " size="lg" variant="primary" type="submit">SIGN IN</Button>
                 </Form>
               </Col>
             </Row>
           </div>
+          <img src={ontraqLogo} alt="logo" className="logo ontraq-logo"/>
         </div>
+
       </div>
     </MainContainer>
   )

@@ -1,5 +1,50 @@
 @import "constants";
 
+.main-container {
+  background-color: $background-color;
+  min-height: 100vh;
+}
+
 .footer {
-  background-color: $ontraq-color;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  .logo-container {
+    img {
+      height: 40px;
+    }
+  }
+}
+
+.auth-container {
+  padding-top: 45px;
+  .title {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .login-container {
+    max-width: 482px;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 10px 44px;
+    box-shadow: $drop-shadow;
+    .logo {
+      display: block;
+      margin: 0 auto;
+      &.parentline-logo {
+        width: 100%;
+      }
+      &.ontraq-logo {
+        width: 247px;
+      }
+    }
+    form {
+      max-width: 300px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }

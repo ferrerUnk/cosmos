@@ -1,1 +1,92 @@
+@import "constants";
 @import "dashboard";
+
+* {
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  color: $font-color;
+}
+
+a {
+  &.parentline-link {
+    color: $parent-line-color !important;
+  }
+  &.ontraq-link {
+    color: $ontraq-color !important;
+  }
+}
+
+.form-label {
+  font-size: 15px !important;
+  margin-bottom: 10px !important;
+}
+.form-control {
+  border: 1px solid $parent-line-dark-color !important;
+  font-size: 15px !important;
+  &:focus {
+    outline: 0 none;
+    box-shadow: 0 0px 8px $parent-line-dark-color !important;
+  }
+  &.ontraq-color {
+    border: 1px solid $ontraq-dark-color !important;
+  }
+  &.ontraq-color:focus {
+    outline: 0 none;
+    box-shadow: 0 0px 8px $ontraq-color !important;
+  }
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ddd !important;
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #ddd !important;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #ddd !important;
+  }
+}
+
+.parent-line-font {
+  color: $parent-line-dark-color;
+}
+
+.btn {
+  font-size: 15px !important;
+  padding: 15px auto !important;
+  border-radius: 5px !important;
+
+  &.btn-parentline {
+    background-color: $parent-line-dark-color !important;
+    border-color: $parent-line-color;
+    &:focus {
+      outline: 0 none;
+      box-shadow: 0 0px 8px $parent-line-color !important;
+    }
+  }
+  &.btn-ontraq {
+    background-color: $ontraq-dark-color !important;
+    border-color: $ontraq-color;
+    &:focus {
+      outline: 0 none;
+      box-shadow: 0 0px 8px $ontraq-color !important;
+    }
+  }
+}
+
+.text-right {
+  text-align: right !important;
+}
