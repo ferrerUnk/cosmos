@@ -1,9 +1,82 @@
 import React, {Component} from 'react';
+import home from '../assets/images/icons/home-gray.png'
+import messages from '../assets/images/icons/messages-gray.png'
+import groups from '../assets/images/icons/groups-gray.png'
+import reports from '../assets/images/icons/reports-gray.png'
+import schools from '../assets/images/icons/schools-gray.png'
+
+export const NAVIGATION_TABS = {
+  PARENTLINE: 'PARENTLINE',
+  ONTRAQ: 'ONTRAQ',
+}
+
+export const PARENTLINE_LINK_NAMES = {
+  HOME: 'HOME',
+  MESSAGES: 'MESSAGES',
+  SCHOOLS: 'SCHOOLS',
+  GROUPS: 'GROUPS',
+  REPORTS: 'REPORTS',
+}
+
+export const PARENTLINE_LINKS = [
+  {
+    name: PARENTLINE_LINK_NAMES.HOME,
+    icon: home,
+    path: '/',
+  },
+  {
+    name: PARENTLINE_LINK_NAMES.MESSAGES,
+    icon: messages,
+    path: '/messages',
+  },
+  {
+    name: PARENTLINE_LINK_NAMES.SCHOOLS,
+    icon: schools,
+    path: '/schools',
+  },
+  {
+    name: PARENTLINE_LINK_NAMES.GROUPS,
+    icon: groups,
+    path: '/groups',
+  },
+  {
+    name: PARENTLINE_LINK_NAMES.REPORTS,
+    icon: reports,
+    path: '/reports',
+  },
+]
+
+
+export const ONTRAQ_LINK_NAMES = {
+  HOME: 'HOME',
+  DEVICES: 'DEVICES',
+  REPORTS: 'REPORTS',
+}
+
+export const ONTRAQ_LINKS = [
+  {
+    name: ONTRAQ_LINK_NAMES.HOME,
+    icon: home,
+    path: '/',
+  },
+  {
+    name: ONTRAQ_LINK_NAMES.DEVICES,
+    icon: home,
+    path: '/',
+  },
+  {
+    name: ONTRAQ_LINK_NAMES.REPORTS,
+    icon: reports,
+    path: '/',
+  }
+]
+
 export const SideNavigationContext = React.createContext();
 export class SideNavigationContextProvider extends Component {
   state = {
     visible: true,
     activeTab: NAVIGATION_TABS.PARENTLINE,
+    activeLink: PARENTLINE_LINKS[0].name
   };
 
   toggle = () => {
@@ -39,8 +112,3 @@ export class SideNavigationContextProvider extends Component {
 }
 
 export default SideNavigationContextProvider;
-
-export const NAVIGATION_TABS = {
-  PARENTLINE: 'PARENTLINE',
-  ONTRAQ: 'ONTRAQ',
-}

@@ -22,35 +22,88 @@
     }
     .side-navigation-content {
       background-color: $white;
+      display: flex;
+      flex-direction: column;
       flex: 1;
       margin-top: 48px;
       border-radius: 25px 25px 0px 0px;
-
-      .navigation-tab-container {
-        box-shadow: 0px 6px 6px #00000015;
-        .navigation-tab-indicator {
-          background-color: $parent-line-color;
-          height: 3px;
-          width: 125px;
-          margin-top: 10px;
-          transition: margin-left 0.5s;
-          &.active-ontraq {
-            background-color: $ontraq-color;
-            margin-left: 125px;
-          }
-        }
-        .navigation-tab {
-          display: flex;
-          margin-top: 10px;
-          padding-top: 10px;
-          .navigation-tab-item {
+      .navigation-links {
+        flex: 1;
+        .navigation-tab-container {
+          box-shadow: 0px 6px 6px #00000015;
+          .navigation-tab-indicator {
+            background-color: $parent-line-color;
+            height: 3px;
             width: 125px;
-            font-size: 15px;
-            text-align: center;
-            &.text-disabled {
-              color: $light-gray !important;
+            margin-top: 10px;
+            transition: margin-left 0.5s;
+            &.active-ontraq {
+              background-color: $ontraq-color;
+              margin-left: 125px;
             }
           }
+          .navigation-tab {
+            display: flex;
+            margin-top: 10px;
+            padding-top: 10px;
+            .navigation-tab-item {
+              width: 125px;
+              font-size: 15px;
+              text-align: center;
+              &.text-disabled {
+                color: $light-gray !important;
+              }
+            }
+          }
+        }
+        .navigation-links-container {
+          margin-top: 30px;
+          overflow-y: auto;
+        }
+      }
+
+      .navigation-link-item,
+      .logout-link {
+        display: flex;
+        padding: 10px 30px;
+        margin: 0 10px;
+        margin-bottom: 10px;
+        align-items: center;
+        border-radius: 5px;
+
+        &.parentline-link {
+          &:hover,
+          &.active {
+            background-color: $parent-line-color;
+            span {
+              color: $white;
+            }
+            img {
+              filter: brightness(0) invert(1);
+            }
+          }
+        }
+        &.ontraq-link {
+          &:hover,
+          &.active {
+            background-color: $ontraq-color;
+            span {
+              color: $white;
+            }
+            img {
+              filter: brightness(0) invert(1);
+            }
+          }
+        }
+
+        span {
+          font-size: 15px;
+        }
+        img {
+          margin-right: 38px;
+          width: 30px;
+          height: 30px;
+          object-fit: contain;
         }
       }
 

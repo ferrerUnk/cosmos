@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { NAVIGATION_TABS, SideNavigationContext } from '../../../context/SideNavigationContext'
 import NavigationTab from './NavigationTab'
 import SideNavigationAvatar from './SideNavigationAvatar'
+import SideNavigationFooter from './SideNavigationFooter'
 
 export default function SideNavigation({}) {
   const sideNavigationContext = useContext(SideNavigationContext)
@@ -14,6 +15,7 @@ export default function SideNavigation({}) {
       <div className='side-navigation-content'>
         <SideNavigationAvatar/>
         <NavigationTab/>
+        <SideNavigationFooter activeTab={activeTab}/>
       </div>
       
     </div>
