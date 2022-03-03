@@ -1,11 +1,13 @@
 import React, {  } from 'react'
-import { Link } from 'react-router-dom'
 import SideNavigationToggler from '../layouts/components/SideNavigationToggler'
 
-export default function Header({}) {
+export default function Header({title}) {
   return (
-    <div className="header bg-white">
-      <SideNavigationToggler/>
+    <div className="header bg-white shadow">
+      <div className='header-title'>
+        <SideNavigationToggler/>
+        <p>{title}</p>
+      </div>
     </div> 
   )
 }

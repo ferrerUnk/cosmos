@@ -22,27 +22,27 @@ export const PARENTLINE_LINKS = [
   {
     name: PARENTLINE_LINK_NAMES.HOME,
     icon: home,
-    path: '/',
+    path: '/parentline',
   },
   {
     name: PARENTLINE_LINK_NAMES.MESSAGES,
     icon: messages,
-    path: '/messages',
+    path: '/parentline/messages',
   },
   {
     name: PARENTLINE_LINK_NAMES.SCHOOLS,
     icon: schools,
-    path: '/schools',
+    path: '/parentline/schools',
   },
   {
     name: PARENTLINE_LINK_NAMES.GROUPS,
     icon: groups,
-    path: '/groups',
+    path: '/parentline/groups',
   },
   {
     name: PARENTLINE_LINK_NAMES.REPORTS,
     icon: reports,
-    path: '/reports',
+    path: '/parentline/reports',
   },
 ]
 

@@ -23,7 +23,7 @@ export default function ForgotPassword() {
     setLoading(false)
   }
   return (
-    <MainContainer headerVisible={false} loading={loading}>
+    <MainContainer sidebarVisible={false} loading={loading}>
     <div className="auth-container">
       <div className="login-container">
         <img src={parentlineLogo} alt="logo" className="logo parentline-logo"/>
