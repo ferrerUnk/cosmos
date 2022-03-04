@@ -57,17 +57,17 @@ export const ONTRAQ_LINKS = [
   {
     name: ONTRAQ_LINK_NAMES.HOME,
     icon: home,
-    path: '/',
+    path: '/ontraq',
   },
   {
     name: ONTRAQ_LINK_NAMES.DEVICES,
     icon: home,
-    path: '/',
+    path: '/ontraq/devices',
   },
   {
     name: ONTRAQ_LINK_NAMES.REPORTS,
     icon: reports,
-    path: '/',
+    path: '/ontraq/reports',
   }
 ]
 
@@ -91,19 +91,36 @@ export class SideNavigationContextProvider extends Component {
     })
   }
 
+  setActiveLink = (activeLink) => {
+    this.setState({
+      activeLink
+    })
+  }
+
+  setActiveLinkAndTab = (activeLink, activeTab) => {
+    this.setState({
+      activeLink,
+      activeTab
+    })
+  }
+
   render() {
     const {children} = this.props;
     const {
       visible,
-      activeTab
+      activeTab,
+      activeLink
     } = this.state;
     return (
       <SideNavigationContext.Provider
         value={{
           visible,
           activeTab,
+          activeLink, 
+          setActiveLink: this.setActiveLink,
           setActiveTab: this.setActiveTab,
-          toggle: this.toggle
+          setActiveLinkAndTab: this.setActiveLinkAndTab,
+          toggle: this.toggle,
         }}>
         {children}
       </SideNavigationContext.Provider>

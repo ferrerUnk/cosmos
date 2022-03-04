@@ -20,6 +20,9 @@ import Home from "../views/home/Home";
 import Schools from "../views/parentline/schools/Schools";
 import Groups from "../views/parentline/groups/Groups";
 import Reports from "../views/parentline/reports/Reports";
+import OntraqHome from "../views/ontraq/home/OntraqHome";
+import Devices from "../views/ontraq/devices/Devices";
+import OntraqReports from "../views/ontraq/reports/OntraqReports";
 
 
 export default function Routes() {
@@ -45,6 +48,11 @@ export default function Routes() {
             <PrivateRoute path='/parentline/schools' exact component={Schools}/>
             <PrivateRoute path='/parentline/groups' exact component={Groups}/>
             <PrivateRoute path='/parentline/reports' exact component={Reports}/>
+
+            <PrivateRoute path='/ontraq' exact component={OntraqHome}/>
+            <PrivateRoute path='/ontraq/devices' exact component={Devices}/>
+            <PrivateRoute path='/ontraq/reports' exact component={OntraqReports}/>
+
 
             <PublicRoute path='/404' exact component={PageNotFound}/>
             <Redirect to="/404"/>

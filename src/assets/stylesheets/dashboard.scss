@@ -241,3 +241,27 @@
     }
   }
 }
+
+.search-container {
+  color: $gray;
+  border: 1px solid $light-gray;
+  margin: 20px 30px;
+  padding: 7px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+
+  .search-icon {
+    font-size: 20px;
+  }
+
+  .search-input {
+    border: none !important;
+    outline: none !important;
+    margin-left: 20px;
+    color: $font-color;
+    &::placeholder {
+      color: $light-gray;
+    }
+  }
+}

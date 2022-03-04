@@ -5,7 +5,7 @@ import { VERSION_NAME, ENV, ENV_LIST } from '../../../config/env'
 
 export default function DevelopmentFooter() {
   return (
-    <div class="footer text-dark">
+    <div class="footer text-dark mt-5 pt-5">
       <div className="logo-container">
         <img src={ontraqLogo} alt="logo"/>
         <img src={parentlineLogo} alt="logo"/>
