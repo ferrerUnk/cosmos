@@ -1,6 +1,12 @@
 @import "constants";
+
+.default-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
 .default-table {
   width: 100%;
+  min-width: 800px;
   b {
     font-weight: 400 !important;
   }
@@ -9,6 +15,7 @@
     th {
       padding: 10px;
       color: $font-color;
+      letter-spacing: 0px;
     }
     th:first-child,
     td:first-child {
@@ -32,11 +39,13 @@
       border-bottom: 1px solid $light-gray;
     }
     td {
+      letter-spacing: 0px;
       padding: 30px 10px;
       font-weight: 300;
       color: $font-color;
+      font-size: 15px;
       a {
-        font-weight: 500;
+        font-weight: 400;
         color: $parent-line-dark-color !important;
         &:hover {
           color: $parent-line-dark-color !important;

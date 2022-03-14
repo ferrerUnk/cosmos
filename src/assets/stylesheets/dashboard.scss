@@ -156,12 +156,24 @@
     margin-left: 250px;
     background-color: $white;
     flex: 1;
+    position: relative;
     transition: margin-left 0.5s;
     &.hidden-sidenav {
       margin-left: 0;
     }
     .header {
+      position: absolute;
+      width: 100%;
+      top: 0;
       height: 60px;
+    }
+    .header + * {
+      margin: 0;
+      padding-top: 60px;
+    }
+    .content-container {
+      height: calc(100vh - 60px);
+      overflow-y: auto;
     }
   }
 }
