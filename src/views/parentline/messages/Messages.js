@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Header from '../../../components/headers/Header'
 import MainContainer from '../../../components/layouts/MainContainer'
 import Search from '../../../components/search/Search'
@@ -12,7 +13,7 @@ export default function Messages() {
       <Header title="MESSAGES"/>
       <Search onChange={setSearch} search={search}/>
       
-      {/* <table>
+      <table className='default-table'>
         <thead>
           <tr>
             <th>TO</th>
@@ -23,13 +24,31 @@ export default function Messages() {
         </thead>
         <tbody>
           <tr>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
-            <td>test</td>
+            <td>Saint James Academy, O...</td>
+            <td><b>Announcement - </b>Lorem ipsum dolor sit amet, ...</td>
+            <td>2/21/22 9:00 AM</td>
+            <td><Link to="">View</Link></td>
+          </tr>
+          <tr>
+            <td>Saint James Academy, O...</td>
+            <td><b>Announcement - </b>Lorem ipsum dolor sit amet, ...</td>
+            <td>2/21/22 9:00 AM</td>
+            <td><Link to="">View</Link></td>
+          </tr>
+          <tr>
+            <td>Saint James Academy, O...</td>
+            <td><b>Announcement - </b>Lorem ipsum dolor sit amet, ...</td>
+            <td>2/21/22 9:00 AM</td>
+            <td><Link to="">View</Link></td>
+          </tr>
+          <tr>
+            <td>Saint James Academy, O...</td>
+            <td><b>Announcement - </b>Lorem ipsum dolor sit amet, ...</td>
+            <td>2/21/22 9:00 AM</td>
+            <td><Link to="">View</Link></td>
           </tr>
         </tbody>
-      </table> */}
+      </table>
 
     </MainContainer>
   )

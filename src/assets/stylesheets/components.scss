@@ -1,0 +1,46 @@
+@import "constants";
+.default-table {
+  width: 100%;
+  b {
+    font-weight: 400 !important;
+  }
+
+  tr {
+    th {
+      padding: 10px;
+    }
+    th:first-child,
+    td:first-child {
+      padding-left: 50px !important;
+    }
+    th:last-child,
+    td:last-child {
+      padding-right: 50px !important;
+    }
+  }
+  thead {
+    background-color: $lighter-gray;
+
+    th {
+      font-weight: 400;
+      font-size: 15px;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid $light-gray;
+    }
+    td {
+      padding: 30px;
+      font-weight: 300;
+      a {
+        font-weight: 500;
+        color: $parent-line-dark-color !important;
+        &:hover {
+          color: $parent-line-dark-color !important;
+        }
+        text-decoration: none !important;
+      }
+    }
+  }
+}
