@@ -8,6 +8,7 @@
   tr {
     th {
       padding: 10px;
+      color: $font-color;
     }
     th:first-child,
     td:first-child {
@@ -33,6 +34,7 @@
     td {
       padding: 30px;
       font-weight: 300;
+      color: $font-color;
       a {
         font-weight: 500;
         color: $parent-line-dark-color !important;
