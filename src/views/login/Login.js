@@ -6,6 +6,8 @@ import MainContainer from '../../components/layouts/MainContainer'
 
 import ontraqLogo from '../../assets/images/ontraq-logo.png'
 import parentlineLogo from '../../assets/images/parentline-logo.png'
+import Auth from '../../api/Auth'
+import { toast } from 'react-toastify'
 
 export default function Login() {
   const [username, setUsername] = useState('')
@@ -19,12 +21,21 @@ export default function Login() {
   const login = async(e) => {
     e.preventDefault()
     setLoading(true)
-    history.replace("/")
+    let response = await new Auth().login({
+      username,
+      password
+    })
+    if(response.ok) {
+      localStorage.setItem('token', response.data.passToken)
+      window.location.href = "/"
+    }else{
+      toast("Invalid username or password")
+    }
     setLoading(false)
   }
   
   return (
-    <MainContainer sidebarVisible={false} loading={loading}>
+    <MainContainer sidebarVisible={false} headerVisible={false}>
       <div className="auth-container">
         <div className="login-container">
           <img src={parentlineLogo} alt="logo" className="logo parentline-logo"/>

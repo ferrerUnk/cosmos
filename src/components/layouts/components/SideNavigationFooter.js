@@ -12,7 +12,7 @@ export default function SideNavigationFooter({activeTab}) {
       <Link className={`logout-link text-decoration-none ${activeTab === NAVIGATION_TABS.ONTRAQ ? "ontraq-link" : "parentline-link"}`} onClick={(e) => {
         e.preventDefault()
         localStorage.removeItem('token')
-        alert("Logout")
+        window.location.href = "/login"
       }}>
         <img src={logout} alt={"LOGOUT"} />
         <span>{"LOG-OUT"}</span>

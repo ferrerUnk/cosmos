@@ -1,5 +1,5 @@
 const developmentConfig = {
-  API: 'localhost:3001',
+  API: 'https://api-parentline.tekteachlms.com',
 };
 
 export default developmentConfig;

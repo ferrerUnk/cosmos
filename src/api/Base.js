@@ -10,7 +10,6 @@ export default class Base {
         Accept: 'application/json',
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*',
-        'X-LMS-KEY': `Web|${subdomain.includes("localhost") ? 'dev' : subdomain }.tekteachlms.com`,
         Authorization: `Bearer ${await window.localStorage.getItem("token")}`,
       },
       method: method,
@@ -38,6 +37,10 @@ export default class Base {
         return error;
       });
     if (response.network_error) {
+      return response;
+    }
+    if (!response.ok){
+      console.log({error: response})
       return response;
     }
 
