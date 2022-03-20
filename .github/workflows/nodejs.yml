@@ -11,13 +11,11 @@ jobs:
   test-deployment:
     runs-on: self-hosted
     steps:
-      - run: npm cache clean --force
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install 
-      - run: npm install @prisma/client
+      - run: npm install
       - run: npx prisma generate / npm prisma migrate dev
       - run: npm install --global yarn
       - run: yarn install
