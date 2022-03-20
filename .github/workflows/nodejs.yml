@@ -11,13 +11,11 @@ jobs:
   test-deployment:
     runs-on: self-hosted
     steps:
-      - run: npx rimraf ./node-modules
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
       - run: npm install
-      - run: npx prisma generate / npm prisma migrate dev
       - run: npm install --global yarn
       - run: yarn install
       - run: yarn run build
