@@ -11,13 +11,13 @@ jobs:
   test-deployment:
     runs-on: self-hosted
     steps:
-      - run: robocopy /e /b /purge C:\inetpub\wwwroot\Backup\Empty C:\inetpub\wwwroot\CICD\ParentLineUI\actions-runner\173-dev\Parentline-and-Ontraq-Web\Parentline-and-Ontraq-Web\node-modules
-      
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install --no-bin-links
+      - run: npm install 
+      - run: npm install @prisma/client
+      - run: npx prisma generate / npm prisma migrate dev
       - run: npm install --global yarn
       - run: yarn install
       - run: yarn run build
