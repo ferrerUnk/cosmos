@@ -21,7 +21,5 @@ jobs:
       - run: yarn run build
         env:
           CI: false
-          
-      - run: copy C:\\Users\\Administrator\\Desktop\\SSL\\web.config C:\CICD\ParentLine\C-Dev-173\Parentline-and-Ontraq-Web\Parentline-and-Ontraq-Web\build
-      
+        
       
